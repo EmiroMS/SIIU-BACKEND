@@ -14,7 +14,7 @@ import lombok.Data;
 
 @Data
 @Entity
-@Table(name = "SIIU_ETAPA_PROYECTO")
+@Table(name = "SIIU_ETAPA_PROYECTO", schema = "BUPP")
 public class EtapaProyecto {
 
     @Id
