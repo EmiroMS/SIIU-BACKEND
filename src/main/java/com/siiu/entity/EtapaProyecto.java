@@ -9,6 +9,8 @@ import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+
+import java.time.LocalDateTime;
 import java.util.Date;
 import lombok.Data;
 
@@ -39,13 +41,13 @@ public class EtapaProyecto {
     @Column(name = "DURACION")
     private Integer duracion;
 
-    @Temporal(TemporalType.DATE)
+   
     @Column(name = "INICIO_VIGENCIA")
-    private Date inicioVigencia;
+    private LocalDateTime inicioVigencia;
 
-    @Temporal(TemporalType.DATE)
+  
     @Column(name = "FIN_VIGENCIA")
-    private Date finVigencia;
+    private LocalDateTime finVigencia;
 
     @Column(name = "CODIGO_PROYECTO", length = 20)
     private String codigoProyecto;
@@ -60,7 +62,7 @@ public class EtapaProyecto {
     private String usuarioCrea;
 
     @Column(name = "FECHA_CREA")
-    private Date fechaCrea;
+    private LocalDateTime fechaCrea;
 
     @Column(name = "USUARIO_ACTUALIZA", length = 20)
     private String usuarioActualiza;
